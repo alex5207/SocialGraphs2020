@@ -41,3 +41,9 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 <script>
 document.getElementById("text").innerHTML = "Text added by JavaScript code";
 </script>
+
+<script>
+  // this is a script that renders a chart
+  var chart = d3.select('body').append('svg')
+     // ...etc...
+</script>
