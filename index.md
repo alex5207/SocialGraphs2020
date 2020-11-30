@@ -123,3 +123,5 @@ document.getElementById("text").innerHTML = "Text added by JavaScript code";
 	<img src="http://example.com/mshroom.png"/>
 	<img src="http://example.com/chomp.png"/>
 </div> 
+
+## test 99
