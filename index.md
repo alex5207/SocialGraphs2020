@@ -8,9 +8,12 @@
 
 ## Talk of the town
 
-You can use the [editor on GitHub](https://github.com/alex5207/SocialGraphs2020/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Wrap-up
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Data
+1. Link to notebook
+2. Link to Kaggle Data
+
 
 ### Markdown
 
