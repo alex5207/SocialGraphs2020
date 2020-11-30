@@ -115,3 +115,11 @@ document.getElementById("text").innerHTML = "Text added by JavaScript code";
 
             });//end click function
 </script>
+
+<div class="roulette" style="display:none;"> 
+	<img src="http://example.com/star.png"/>
+	<img src="http://example.com/flower.png"/>
+	<img src="http://example.com/coin.png"/>
+	<img src="http://example.com/mshroom.png"/>
+	<img src="http://example.com/chomp.png"/>
+</div> 
