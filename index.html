@@ -2,11 +2,26 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
 <html lang="en">
 <head>
@@ -42,6 +57,13 @@
 
   <div>
     <h2> Actor community </h2>
+    <canvas id="horizontalBar" style="max-width: 500px;"></canvas>
+    <button
+      type="button"
+      class="btn btn-primary"
+      id="canvasBtn"
+      >Shuffle data
+    </button>
     <p> ..  </p>
 
     <img src="https://media.giphy.com/media/PgzfOLK6WVeu6JLPkQ/giphy.gif" alt="description of gif" />
@@ -73,6 +95,28 @@
 
 
 </div>
+
+
+<script type='module'>
+  import { drawChart } from './horizontalBar.js'
+  async function newCharts() {
+    for(var i = 0; i < 10; i++) {
+      await new Promise(r => setTimeout(r, 500));
+      newChart(i.toString())
+    }
+  }
+  function newChart(year = '2020') {
+    console.log("clicked")
+    var data = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+    drawChart('horizontalBar', data, year)
+  }
+  newChart('2022');
+  document.getElementById ("canvasBtn").addEventListener ("click", newCharts, false);
+
+
+
+
+</script>
 
 </body>
 </html>
