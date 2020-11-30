@@ -54,74 +54,10 @@ document.getElementById("text").innerHTML = "Text added by JavaScript code";
 </script>
 
 <script>
-     var w = 500;
-    var h = 200;
-
-    data1 = [50, 60, 70, 30, 20, 10];
-    data2 = [30, 80, 20, 40];
-    dataIndex = 1;
-    
-    var colors = d3.scale.category10();
-
-    //Create SVG element
-    var svg = d3.select("#draw_here")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h);
-
-    svg.selectAll("circle")
-            .data(data1)
-            .enter()
-            .append("circle")
-            .attr("cx", function (d, i) {
-                return 75 + (i * 80);
-            })
-            .attr("cy", h / 2)
-            .attr("r", function (d, i) {
-                return d;
-            })
-            .attr("fill", function(d, i) {
-                return colors(i);
-            })
-            .attr("opacity", "0.5");
-
-    d3.select("#buttons_here").append("button")
-            .text("change data")
-            .on("click",function(){
-                if (dataIndex==1) {
-                    dataIndex=2;  
-                } else   {
-                    dataIndex=1;
-                }
-                var circle = svg.selectAll("circle")
-                    .data(eval("data"+dataIndex));
-
-                circle.exit().remove();//remove unneeded circles
-                    circle.enter().append("circle")
-                        .attr("r",0);//create any new circles needed
-
-                circle.transition()
-                        .duration(500)
-                        .attr("cx", function (d, i) {
-                            return 75 + (i * 80);
-                        })
-                        .attr("cy", h / 2)
-                        .attr("r", function (d, i) {
-                            return d;
-                        })
-                        .attr("fill", function(d, i) {
-                            return colors(i);
-                        });
-
-            });//end click function
+document.getElementById("text").innerHTML = "Text added by JavaScript code";
 </script>
 
-<div class="roulette" style="display:none;"> 
-	<img src="http://example.com/star.png"/>
-	<img src="http://example.com/flower.png"/>
-	<img src="http://example.com/coin.png"/>
-	<img src="http://example.com/mshroom.png"/>
-	<img src="http://example.com/chomp.png"/>
-</div> 
+
+$('div.roulette').roulette(option);
 
 ## test 99
