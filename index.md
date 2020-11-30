@@ -1,4 +1,12 @@
-## The Hollywood Project
+# The Hollywood Project
+
+## Introduction
+
+## Network Evolution
+
+## Actor Community
+
+## Talk of the town
 
 You can use the [editor on GitHub](https://github.com/alex5207/SocialGraphs2020/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
