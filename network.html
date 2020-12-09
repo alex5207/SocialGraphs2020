@@ -1,0 +1,91 @@
+<html>
+<h3> The Actor Network </h3>
+<b>The actor network</b>
+<ul>
+  <li> 500 vertices corresponding to actors </li>
+  <li> 18k+ edges indicating actors have starred together </li>
+</ul>
+<figure class="figure" style="margin-top:0px;">
+  <img src="./assets/aj_neighbors.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:0px;width:800px;">
+  <figcaption class="figure-caption">
+    The neighbors of Angelina Jolie. The actors are colored with their most frequent movie genre. <br />
+    There are 69 actors on the figure, corresponding to all the actors and actresses AJ played with!
+  </figcaption>
+</figure>
+<div class="row" style="margin-top:20px;">
+  <div>
+    <h5> <u>Distribution and productivity</u></h5>
+    <p>
+      Let us take a look at how many other actors the actors and actresses have
+      starred with and how productive they are.
+    </p>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-sm" style="margin-right:0px;">
+    <figure class="figure">
+      <img src="./assets/actor_hist.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="width:400%;height:400%;">
+      <figcaption class="figure-caption">
+        Histogram of degree distribution
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col" style="margin-top:20px;">
+    <figure class="figure" style="margin-top:0px;">
+      <img src="./assets/actor_productivity.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+      <figcaption class="figure-caption">
+        Most and least productive actors of the network
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="row" style="margin-top:20px;">
+  <span>
+    From the plot to the left, wee see that the average actor has
+    produced around 65 movies, while some of the most productive actors has produced
+    more than 150! The plot on the right reveals which actors have been most
+    and least productive. Samuel Jackson created +20 movies per decade in his first
+    30 years - <strong> Impressive!</strong>
+  </span>
+  <div id="sjModal"></div>
+</div>
+<hr />
+<p>
+  Next up, let us try to understand how genres have developed in Hollywood through
+  the decades. Which genre is the most prevailing?
+</p>
+<div class="row" style="margin-top:20px;margin-left:0px;">
+  <div class="col">
+    <figure class="figure" style="margin-top:0px;">
+      <img src="./assets/genre_dist.gif" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="height:400px;">
+      <figcaption class="figure-caption">
+        Distribution of genres in the network
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col">
+    <div class="jumbotron bg-white" style="margin-top:35px;">
+      <p class="font-weight-bold"> <b> Drama reigns in Hollywood </b> </p>
+      <p class="lead" style="font-size:14px;">
+        The animation on the left shows how genres have developed over the years. <br />
+        Drama has all the way since the beginning of the 20th century lead the movie sets!
+      </p>
+      <hr class="my-4">
+      <span>
+        From the 1970s and 1980s thriller and action seems to be on this rise, while
+        comedy catches on in the 1990s
+      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function(){
+    $("#sjModal").load("sj_modal.html");
+  });
+</script>
+
+
+
+</html>

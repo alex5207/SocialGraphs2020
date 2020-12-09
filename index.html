@@ -23,103 +23,81 @@
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="./sideBar.css">
+
 <html lang="en">
 <head>
-  <title>Hollywood network Example</title>
+  <title>Hollywood network</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/jpg" href="/hollywood.jpg"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div class="container">
-  <div class="page-header">
-    <h1>The Hollywood Network Project <small>Social Graphs at DTU (2020)</small></h1>
-  </div>
-
-  <div class="jumbotron">
-    <h2>Introduction</h2>
-    <p>
-      This website is a network analysis of Hollywood based on data from 5000 movies
-      created between 1916 and 2019. We focus on how the <i> home of the stars</i>
-      have changed during those years. <br /> <br />
-      We begin by studying how the different genres have emerged over the years
-    </p> <br />
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-  </div>
-
-  <div>
-    <h2> Network Evolution </h2>
-    <p> ..  </p>
-  </div>
-
-  <div>
-    <h2> Actor community </h2>
-    <canvas id="horizontalBar" style="max-width: 500px;"></canvas>
-    <button
-      type="button"
-      class="btn btn-primary"
-      id="canvasBtn"
-      >Shuffle data
-    </button>
-    <p> ..  </p>
-
-    <img src="https://media.giphy.com/media/PgzfOLK6WVeu6JLPkQ/giphy.gif" alt="description of gif" />
-
-  </div>
-
-  <div>
-    <h2> Talk of the town </h2>
-    <p> Include matplotlib gif </p>
-    <img src="/example.gif" width='500px'/>
-    <p> ..  </p>
-  </div>
-
-  <div>
-    <h3> References </h3>
-      <div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/bhqFu5bjT2I"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-1.5">
+      <div id="sideBar" style="margin-top:98px;"></div>
+    </div>
+    <div class="col-9">
+      <div class="page-header">
+        <h1>The Hollywood Network Project
+          <small>Social Graphs at DTU (2020)</small>
+          <button type="button" class="btn btn-outline-info">
+            <a target='_blank' href="https://nbviewer.jupyter.org/github/GSHDK/Social-Graphs-and-Interactions/blob/main/Jupyter/Project-Home.ipynb">
+              <text>Go to notebook</text>
+            </a>
+          </button>
+        </h1>
       </div>
+      <div class="row">
+        <div class="col" style="margin-right:0px; padding:0px;">
+          <div id="introduction" style="margin-top:5px"></div>
+        </div>
+        <div class="col" style="margin-left:0px;padding:0px;">
+          <div id="cards"></div>
+        </div>
       </div>
-    <p> ..  </p>
-  </div>
-
-
-
-
+      <div class="row">
+        <div id="network"></div>
+      </div>
+      <hr />
+      <div class="row">
+        <div id="wiki"></div>
+      </div>
+      <hr />
+      <div class="row">
+        <div id="comparison"></div>
+      </div>
+      <div class="row">
+        <div id="conclusion"></div>
+      </div>
+      <div class="row">
+        <div id="references"></div>
+      </div>
+    </div>
 </div>
+</body>
 
+<script>
+  $(function(){
+    $("#introduction").load("introduction.html");
+    $("#sjModal").load("sj_modal.html");
+    $("#networkGif").load("networkGif.html");
+    $("#cards").load("cards.html");
+    $("#network").load("network.html");
+    $("#wiki").load("wiki.html");
+    $("#comparison").load("comparison.html");
+    $("#references").load("references.html");
+    $("#sideBar").load("sideBar.html");
+    $("#conclusion").load("conclusion.html");
 
-<script type='module'>
-  import { drawChart } from './horizontalBar.js'
-  async function newCharts() {
-    for(var i = 0; i < 10; i++) {
-      await new Promise(r => setTimeout(r, 500));
-      newChart(i.toString())
-    }
-  }
-  function newChart(year = '2020') {
-    console.log("clicked")
-    var data = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
-    drawChart('horizontalBar', data, year)
-  }
-  newChart('2022');
-  document.getElementById ("canvasBtn").addEventListener ("click", newCharts, false);
-
-
-
-
+  });
 </script>
 
-</body>
+
 </html>

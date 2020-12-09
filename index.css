@@ -1,0 +1,16 @@
+.card:hover {
+  box-shadow: 8px 8px 8px #0275d8;
+}
+
+#comDet {
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #292b2c 50%);
+  background-position: -0% 0;
+  background-size: 200% auto;
+  line-height: 1.15em;
+  text-decoration: none;
+  transition: background-position 0.5s ease-out;
+}
+#comDet:hover {
+  background-position: -99.99% 0;
+  color: white;
+}

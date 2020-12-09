@@ -1,0 +1,126 @@
+<p class="h2"> Hollywood as a sign of the times </p>
+
+<p class="h3">
+  What if Hollywood could tell us about what's going on in the world?
+  <small class="text-muted">
+    Imagine that the movies produced in Hollywood
+    <i>somehow</i> reflect their time.
+  </small>
+</p>
+
+<div class = "row">
+  <div class="col bg-white">
+    <p>
+      We apply a statistical measure called TF-IDF to identify the most
+      important words in the movie descriptions for the movies in each decade.
+      Then we compare the words with those used in the
+      <mark>Wikipedia page</mark> for each
+      decade (example <a target='_blank' href="https://en.wikipedia.org/wiki/1990s"> <u>here</u></a>).
+    </p>
+    <p>
+      What we hope to find is that the words used in movie descriptions
+      can be traced to events or sentiments of the real world. <br /> <br />
+
+      <span class='text-primary'>... And now for some results </span>
+    </p>
+
+  </div>
+  <div class="col">
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading"> What is TF-IDF? <span class="glyphicon glyphicon-info-sign"></span></h4>
+      <p>
+        The <strong>Term-frequency/Inverted-document-frequency</strong> is a
+        statistical measure that can be used to measure the importance of
+        words in a pieces of text among other texts.
+      </p>
+      <hr>
+      <p class="mb-0">
+        See more about the measure in our
+        <a target='_blank' href="https://nbviewer.jupyter.org/github/GSHDK/Social-Graphs-and-Interactions/blob/main/Project%20assignment%20B.ipynb#Calculation-of-TF-IDF"> <u>notebook</u> </a> or on
+        <a target='_blank'  href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf"> <u>wikipedia</u></a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col">
+    <figure class="figure">
+      <img src="./assets/hollywood_tfidf_1980.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:0px;width:800px;">
+      <img src="./assets/hollywood_tfidf_1990.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:0px;width:800px;">
+      <img src="./assets/hollywood_tfidf_2000.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:0px;width:800px;">
+      <img src="./assets/hollywood_tfidf_2010.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:0px;width:800px;">
+      <figcaption class="figure-caption">
+        Most important words of movie description through the decades
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col">
+    <figure class="figure">
+      <img src="./assets/wiki_tfidf_1980.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:8px;width:800px;">
+      <img src="./assets/wiki_tfidf_1990.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:4px;width:800px;">
+      <img src="./assets/wiki_tfidf_2000.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:4px;width:800px;">
+      <img src="./assets/wiki_tfidf_2010.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="margin-top:5px;width:800px;">
+      <figcaption class="figure-caption">
+        Most important words in the wikipedia description of each decade
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<div class="row" style="margin-top:10px;">
+  <div class="col">
+    <div class="alert alert-warning" role="alert">
+      <p> <strong> Well.. Not an easy task!</strong></p>
+    </div>
+      <div class="row">
+        <div class="col">
+          <span> <strong> Movie descriptions </strong></span>
+          <ul>
+            <li> Life </li>
+            <li> Family </li>
+            <li> Find </li>
+            <li> Love </li>
+
+          </ul>
+        </div>
+        <div class="col">
+          <span> <strong> Wikipedia pages </strong></span>
+          <ul>
+            <li> War </li>
+            <li> Soviet </li>
+            <li> New </li>
+            <li> Web </li>
+            <li> World </li>
+          </ul>
+        </div>
+        <p>
+          As can be seen from the above lists, the important words differ
+          quite a lot and it is not easy to construct links between them. <br />
+          <strong>Maybe</strong> it is not that movie descriptions cannot describe their time.
+          It might be that it describes it in <mark> a different way </mark>,
+          relecting more <strong>feelings</strong> than <strong>facts</strong>.
+        </p>
+      </div>
+  </div>
+  <div class="col">
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading"> The nature of the texts</h4>
+      <h5> <u>Movie descriptions</u> </h5>
+      <p>
+        Movie descriptions are generally storytelling.
+        They contain descriptive words about the movie like describing the
+        characters as <i>young</i>, <i>a father</i> etc.
+      </p>
+      <h5> <u>Wikipedia pages</u> </h5>
+        Wikipedia pages are objective by nature. The decade descriptions
+        seek to summarize the decade in a compact and non-emotional way.
+      <hr>
+      <p class="mb-0">
+        See more about the measure in our
+        <a target='_blank' href="https://nbviewer.jupyter.org/github/GSHDK/Social-Graphs-and-Interactions/blob/main/Project%20assignment%20B.ipynb#Calculation-of-TF-IDF"> <u>notebook</u> </a> or on
+        <a target='_blank'  href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf"> <u>wikipedia</u></a>
+      </p>
+    </div>
+  </div>
+</div>
